@@ -1,4 +1,4 @@
-# ⚙️ AutoFlow — Plataforma de Automação Visual de Workflows
+# AutoFlow — Plataforma de Automação Visual de Workflows
 
 AutoFlow é uma plataforma web intuitiva e moderna para criação, agendamento e execução visual de fluxos de trabalho (workflows) automatizados. Semelhante a ferramentas como n8n e Zapier, o AutoFlow permite conectar blocos lógicos e de ação em um canvas interativo, executar scripts personalizados em Python, gerenciar atrasos (delays), tomar decisões condicionais e acompanhar a execução dos processos em tempo real através de logs transmitidos por WebSockets.
 
@@ -19,6 +19,7 @@ O AutoFlow foi estruturado utilizando uma arquitetura desacoplada entre frontend
 
 O diagrama abaixo representa o fluxo principal de execução dos workflows:
 
+<img width="884" height="524" alt="fluxo" src="https://github.com/user-attachments/assets/ba1496c5-f2ca-4d6e-a09d-f9994bb2ee3b" />
 
 ---
 
@@ -39,24 +40,6 @@ O diagrama abaixo representa o fluxo principal de execução dos workflows:
 - **APScheduler (Advanced Python Scheduler)**: Agendador de tarefas em segundo plano baseado em Cron.
 - **WebSockets**: Comunicação bidirecional contínua para transmissão de logs de execução em tempo real.
 - **Python Subprocess**: Ambiente temporário para execução isolada de scripts Python inseridos no canvas.
-
----
-
-## 📂 Estrutura de Pastas Recomendada
-
-Para manter seu projeto organizado e pronto para exibição no GitHub, utilize a seguinte estrutura:
-
-```text
-AutoFlow/
-├── backend/            # Código-fonte do servidor FastAPI
-├── frontend/           # Código-fonte do cliente React + Vite
-├── docs/               # Documentação complementar do projeto
-│   └── media/          # 👈 COLOQUE SUAS FOTOS/VIDEOS DO SISTEMA AQUI
-└── README.md           # Este arquivo de documentação
-```
-
-> [!TIP]
-> Crie a pasta `docs/media/` na raiz do projeto e salve lá os prints do dashboard, do editor de fluxos e GIFs demonstrativos. Você pode referenciá-los no Markdown usando caminhos relativos, como: `![Dashboard](./docs/media/dashboard.png)`.
 
 ---
 
@@ -135,11 +118,18 @@ Abra um novo terminal na raiz do projeto:
 ---
 
 ## 📸 Demonstração do Sistema (Mídias)
+<img width="1347" height="636" alt="login_flow" src="https://github.com/user-attachments/assets/908f72d5-a0ad-4e46-911c-599ad80ccc52" />
 
-Substitua os links abaixo pelos prints ou GIFs reais que você salvar na pasta `docs/media/` para dar um destaque visual premium ao seu repositório:
+---
 
-| Tela do Editor | Painel de Logs em Tempo Real |
-| :---: | :---: |
-| ![Editor Canvas](./docs/media/editor.png) | ![Live Logs](./docs/media/logs.png) |
+<img width="1355" height="640" alt="Dashboard_flow" src="https://github.com/user-attachments/assets/8c6542b0-52f8-4dfd-896f-c24b3fff344e" >
 
-*(Exemplo de link de imagem: `![Descrição](./docs/media/nome_da_imagem.png)`)*
+---
+
+<img width="1364" height="640" alt="Work_Flow" src="https://github.com/user-attachments/assets/f99f5679-5663-4323-851b-7b6b995f812d" />
+
+---
+
+<img width="1357" height="643" alt="terminal_flow" src="https://github.com/user-attachments/assets/d2a63206-4ae9-48f8-95eb-38368d1ea5a3" />
+
+---
