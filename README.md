@@ -130,6 +130,10 @@ Abra um novo terminal na raiz do projeto:
 
 ---
 
+<img width="1354" height="635" alt="bloco_python" src="https://github.com/user-attachments/assets/c01bfa87-0135-437f-8f8d-8666a82d4887" />
+
+---
+
 <img width="1357" height="643" alt="terminal_flow" src="https://github.com/user-attachments/assets/d2a63206-4ae9-48f8-95eb-38368d1ea5a3" />
 
 ---
