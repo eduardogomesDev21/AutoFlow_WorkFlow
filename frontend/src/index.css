@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-dark-text font-sans antialiased overflow-x-hidden;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.05) 0px, transparent 50%);
+  }
+
+  /* Custom Scrollbars */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-dark-border rounded-full hover:bg-brand-primary/50 transition-colors;
+  }
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* React Flow Visual Customizations */
+.react-flow__renderer {
+  @apply bg-dark-bg;
+}
+
+.react-flow__background {
+  @apply opacity-[0.03];
+}
+
+.react-flow__controls {
+  @apply !bg-dark-card !border !border-dark-border !rounded-lg !shadow-glass;
+}
+
+.react-flow__controls-button {
+  @apply !bg-transparent !border-b !border-dark-border !text-dark-text hover:!bg-dark-input hover:!text-brand-primary !transition-colors !w-8 !h-8 !flex !items-center !justify-center;
+}
+
+.react-flow__controls-button:last-child {
+  @apply !border-b-0;
+}
+
+.react-flow__minimap {
+  @apply !bg-dark-card/90 !border !border-dark-border !rounded-lg !shadow-glass !overflow-hidden;
+}
+
+/* Custom Node Styles */
+.autoflow-node {
+  @apply bg-dark-card border border-dark-border rounded-xl shadow-glass flex flex-col min-w-[220px] transition-all duration-200 overflow-hidden;
+}
+
+.autoflow-node:hover {
+  @apply border-brand-primary/60 shadow-glow-primary scale-[1.01];
+}
+
+.autoflow-node.selected {
+  @apply border-brand-primary shadow-glow-primary;
+}
+
+/* Handle Styles */
+.react-flow__handle {
+  @apply !w-3 !h-3 !bg-brand-primary !border-2 !border-dark-card hover:!bg-brand-accent !transition-colors;
+}
+
+.react-flow__handle-top, .react-flow__handle-bottom {
+  @apply !w-4 !h-2 !rounded-full;
+}
+
+.react-flow__handle-left, .react-flow__handle-right {
+  @apply !h-4 !w-2 !rounded-full;
+}
+
+.react-flow__edge-path {
+  @apply stroke-dark-border stroke-2 transition-all duration-300;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  @apply stroke-brand-primary stroke-[3px];
+}
+
+.react-flow__edge.animated .react-flow__edge-path {
+  stroke-dasharray: 5;
+  animation: dash 0.5s linear infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 10;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
